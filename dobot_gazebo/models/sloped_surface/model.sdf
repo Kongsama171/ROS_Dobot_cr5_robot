@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="sloped_surface">
+    <pose>1 0 0.3 1.57 -1.57 0</pose> <!-- 设置位置 -->
+
+    <link name="link">
+      <!-- 物理形状 -->
+      <collision name="collision">
+        <geometry>
+          <!-- 使用 polyline 来定义梯形 -->
+          <polyline>
+            <point>0.0 0.0 0.0</point> <!-- 梯形左下 -->
+            <point>0.5 0.0 0.0</point>  <!-- 梯形右下 -->
+            <point>0.4 0.4 0.5</point> <!-- 梯形右上 -->
+            <point>0.0 0.4 0.5</point> <!-- 梯形左上 -->
+            <point>0.0 0.0 0.0</point>  <!-- 回到左下，闭合路径 -->
+          </polyline>
+        </geometry>
+        <pose>0 0 0 0 0 0</pose>
+      </collision>
+
+      <!-- 可视部分 -->
+      <visual name="visual">
+        <geometry>
+          <!-- 使用 polyline 来定义梯形 -->
+          <polyline>
+            <point>0.0 0.0 0.0</point>
+            <point>0.5 0.0 0.0</point>
+            <point>0.4 0.4 0.5</point>
+            <point>0.0 0.4 0.5</point>
+            <point>0.0 0.0 0.0</point>
+          </polyline>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+          <diffuse>0.8 0.8 0.8 1</diffuse>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+</sdf>
+

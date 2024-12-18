@@ -202,7 +202,7 @@ roslaunch dobot_description display.launch
 
 可通过 joint_state_publisher_gui 调节各关节的角度，在 rviz 上看到其显示效果
 
-![rviz显示](/rviz.jpg)
+![rviz显示](./image/rviz.jpg)
 
 
 
@@ -216,7 +216,7 @@ roslaunch dobot_moveit demo.launch
 
 * 鼠标将关节拖到任意的角度，点击 "Plan and Execute" 即可看到运行效果
 
-![moveit显示](/moveit.gif)
+![moveit显示](./image/moveit.gif)
 
 
 
@@ -277,7 +277,7 @@ roslaunch dobot_moveit moveit.launch
 
 仿真异常处理方法：
 
-![joint_controller](/joint_controller.png)
+![joint_controller](./image/joint_controller.png)
 
 1.  安装 ros-control  ros-controller依赖
 
@@ -349,7 +349,7 @@ roslaunch dobot_moveit moveit.launch
 }
 ```
 
-![](/robotType.png)
+![](./image/robotType.png)
 
 
 
@@ -360,7 +360,7 @@ roslaunch dobot_moveit moveit.launch
   3. 点击 “EnableRobot” 使机械臂
   4. 当状态样上显示 “Enable” “Connected” 表示机械臂已连接和使能，即可通过 Moveit 控制机械臂
 
-  ![DobotControl](/cr5control.jpg)
+  ![DobotControl](./image/cr5control.jpg)
 
 
 
@@ -504,15 +504,15 @@ roslaunch dobot_moveit moveit.launch
 
 1.  主线程：分别对机器控制端口，运动端口，反馈端口进行连接。给机器使能，MovL移动指令等动作
 
-![](/main.png)
+![](./image/main.png)
 
 2.  反馈状态线程：实时反馈机器的状态信息
 
-![](/feed.png)
+![](./image/feed.png)
 
 3. 机器运动线程： 给机器下发运动指令
 
-![](/move.png)
+![](./image/move.png)
 
 运动指令到位信号：
 
@@ -526,7 +526,7 @@ roslaunch dobot_moveit moveit.launch
 
 4.  异常处理线程：对机器异常状态进行判断和处理动作
 
-![](/excetion.png)
+![](./image/excetion.png)
 
 
 
@@ -542,7 +542,7 @@ roslaunch dobot_moveit moveit.launch
 
    控制面板>>网络>> Internet>>网络连接  
 
-   ![](/netConnect.png)
+   ![](./image/netConnect.png)
 
    
 
@@ -550,13 +550,13 @@ roslaunch dobot_moveit moveit.launch
 
    修改ip地址为192.168.5.X网段IP
 
-   ![](/updateIP.png)
+   ![](./image/updateIP.png)
 
    
 
 3. 连接上位机DobotStudio Pro，连接机器，把机器模式切换至TCP/IP模式
 
-   ![](/checkTcpMode.png)
+   ![](./image/checkTcpMode.png)
 
 
 

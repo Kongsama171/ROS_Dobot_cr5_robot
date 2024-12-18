@@ -5,13 +5,14 @@
   <include file="$(find dobot_gazebo)/launch/robot_control.xml"/>
 
   <!--Launch a gazebo world-->
-  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
-    <arg name="world_name" value="$(find dobot_gazebo)/worlds/willow_garage.world"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find dobot_gazebo)/worlds/ramp.world"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
+  </include>
   <node 
      name="urdf_spawner" 
      pkg="gazebo_ros" 
